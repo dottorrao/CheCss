@@ -2,8 +2,11 @@ var oldPiece = ""
 var oldTd = "";
 
 function tdClick(e,td){
+	/*get selected TD*/
 	td = document.getElementById(td.id);
+	/*if it's beginning of the moving*/
 	if ( oldTd == "") {
+		/* only if a cell with a piece has been selected*/
 		if (td.innerHTML.indexOf("<img") != -1 ){
 			oldTd = td;
 			oldPiece = td.innerHTML;
